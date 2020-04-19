@@ -1,0 +1,223 @@
+
+Showing logs for build [32mtroyhart-jx-sd1-master-release-v9whz-5[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-2dtsf[0m
+{"level":"warn","ts":1587315845.6889548,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1587315845.6911597,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mtroyhart-jx-sd1-master-release-v9whz-5[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-rjdrm[0m
+{"level":"warn","ts":1587315846.5973358,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1587315846.5993493,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mtroyhart-jx-sd1-master-release-v9whz-5[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mtroyhart-jx-sd1-master-release-v9whz-5[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-troyhart-jx-sd1-master-release-v9whz-j74sp[0m
+{"level":"warn","ts":1587315855.8697982,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1587315856.6549737,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/********/**-sd1.git @ v0.1.1 in path /workspace/source"}
+
+Showing logs for build [32mtroyhart-jx-sd1-master-release-v9whz-5[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:454d534d21aac0e48c90efd73aeaf4026ad387b8
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mtroyhart-jx-sd1-master-release-v9whz-5[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mtroyhart-jx-sd1-master-release-v9whz-5[0m stage [32mfrom-build-pack[0m and container [32mstep-build-mvn-deploy[0m
+Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -Dsun.zip.disableMemoryMapping=true -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Xms10m -Xmx192m
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< com.example:**-sd1 >-------------------------
+[INFO] Building **-sd1 0.1.1
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ **-sd1 ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ **-sd1 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ **-sd1 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /workspace/source/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ **-sd1 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /workspace/source/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ **-sd1 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /workspace/source/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M1:test (default-test) @ **-sd1 ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.demo.DemoApplicationTests
+17:05:11.100 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+17:05:11.208 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+17:05:11.496 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.example.demo.DemoApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+17:05:11.604 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.demo.DemoApplicationTests], using SpringBootContextLoader
+17:05:11.614 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.demo.DemoApplicationTests]: class path resource [com/example/demo/DemoApplicationTests-context.xml] does not exist
+17:05:11.615 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.demo.DemoApplicationTests]: class path resource [com/example/demo/DemoApplicationTestsContext.groovy] does not exist
+17:05:11.616 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.example.demo.DemoApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+17:05:11.617 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.demo.DemoApplicationTests]: DemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:05:12.001 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.example.demo.DemoApplicationTests]
+17:05:12.496 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/workspace/source/target/classes/com/example/demo/DemoApplication.class]
+17:05:12.604 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.demo.DemoApplication for test class com.example.demo.DemoApplicationTests
+17:05:13.185 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.example.demo.DemoApplicationTests]: using defaults.
+17:05:13.186 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+17:05:13.292 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/TransactionDefinition]
+17:05:13.294 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+17:05:13.294 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@75cd8043, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@33b1c5c5, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5b202a3a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@10b9db7b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@9ef8eb7, org.springframework.test.context.event.EventPublishingTestExecutionListener@34cdeda2, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6ee660fb, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@305a0c5f, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@4535b6d5, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1ecee32c, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4372b9b6]
+17:05:13.381 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@56113384 testClass = DemoApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@5669c5fb testClass = DemoApplicationTests, locations = '{}', classes = '{class com.example.demo.DemoApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@57db2b13, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5c7bfdc1, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@d2de489, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@311bf055], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+17:05:13.609 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.6.RELEASE)
+
+2020-04-19 17:05:15.604  INFO 71 --- [           main] com.example.demo.DemoApplicationTests    : Starting DemoApplicationTests on ********-**-sd1-master-release-v9whz-5-from-build-pack-64d72-po with PID 71 (started by root in /workspace/source)
+2020-04-19 17:05:15.607  INFO 71 --- [           main] com.example.demo.DemoApplicationTests    : No active profile set, falling back to default profiles: default
+2020-04-19 17:05:30.500  INFO 71 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-19 17:05:33.600  INFO 71 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-04-19 17:05:33.992  INFO 71 --- [           main] com.example.demo.DemoApplicationTests    : Started DemoApplicationTests in 20.291 seconds (JVM running for 29.393)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 25.902 s - in com.example.demo.DemoApplicationTests
+2020-04-19 17:05:36.303  INFO 71 --- [extShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.2:jar (default-jar) @ **-sd1 ---
+[INFO] Building jar: /workspace/source/target/**-sd1-0.1.1.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.2.6.RELEASE:repackage (repackage) @ **-sd1 ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ **-sd1 ---
+[INFO] Installing /workspace/source/target/**-sd1-0.1.1.jar to /home/jenkins/.mvnrepository/com/example/**-sd1/0.1.1/**-sd1-0.1.1.jar
+[INFO] Installing /workspace/source/pom.xml to /home/jenkins/.mvnrepository/com/example/**-sd1/0.1.1/**-sd1-0.1.1.pom
+[INFO] 
+[INFO] --- maven-deploy-plugin:2.8.2:deploy (default-deploy) @ **-sd1 ---
+[INFO] Using alternate deployment repository local-nexus::default::http://nexus/repository/maven-releases/
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:23 min
+[INFO] Finished at: 2020-04-19T17:05:49Z
+[INFO] ------------------------------------------------------------------------
+
+Showing logs for build [32mtroyhart-jx-sd1-master-release-v9whz-5[0m stage [32mfrom-build-pack[0m and container [32mstep-build-skaffold-version[0m
+v1.0.1
+
+Showing logs for build [32mtroyhart-jx-sd1-master-release-v9whz-5[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Resolved base name openjdk:11-jre-slim to openjdk:11-jre-slim 
+[36mINFO[0m[0000] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0000] Resolved base name openjdk:11-jre-slim to openjdk:11-jre-slim 
+[36mINFO[0m[0000] Retrieving image manifest openjdk:11-jre-slim 
+[36mINFO[0m[0001] Retrieving image manifest openjdk:11-jre-slim 
+[36mINFO[0m[0002] Built cross stage deps: map[]                
+[36mINFO[0m[0002] Retrieving image manifest openjdk:11-jre-slim 
+[36mINFO[0m[0002] Retrieving image manifest openjdk:11-jre-slim 
+[36mINFO[0m[0003] cmd: EXPOSE                                  
+[36mINFO[0m[0003] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0003] Resolving srcs [pom.xml target/lib*]...      
+end of resolve sources
+[36mINFO[0m[0003] Checking for cached layer docker-registry.default.svc.cluster.local:5000/todo/cache:5788290f8ee0827943a00515fd121074b03a000c6511a5a1e94f0d72570e202b... 
+[36mINFO[0m[0003] No cached layer found for cmd COPY pom.xml target/lib* /opt/lib/ 
+[36mINFO[0m[0003] Resolving srcs [target/*.jar]...             
+end of resolve sources
+[36mINFO[0m[0003] Unpacking rootfs as cmd COPY pom.xml target/lib* /opt/lib/ requires it. 
+[36mINFO[0m[0016] Taking snapshot of full filesystem...        
+[36mINFO[0m[0016] Resolving paths                              
+[36mINFO[0m[0019] ENV PORT 8080                                
+[36mINFO[0m[0019] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0019] ENV CLASSPATH /opt/lib                       
+[36mINFO[0m[0019] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0019] EXPOSE 8080                                  
+[36mINFO[0m[0019] cmd: EXPOSE                                  
+[36mINFO[0m[0019] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0019] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0019] Resolving srcs [pom.xml target/lib*]...      
+end of resolve sources
+[36mINFO[0m[0019] COPY pom.xml target/lib* /opt/lib/           
+[36mINFO[0m[0019] Resolving srcs [pom.xml target/lib*]...      
+end of resolve sources
+[36mINFO[0m[0019] Resolving paths                              
+[36mINFO[0m[0019] Taking snapshot of files...                  
+[36mINFO[0m[0019] Pushing layer docker-registry.default.svc.cluster.local:5000/todo/cache:5788290f8ee0827943a00515fd121074b03a000c6511a5a1e94f0d72570e202b to cache now 
+[36mINFO[0m[0019] Resolving srcs [target/*.jar]...             
+end of resolve sources
+[36mINFO[0m[0019] COPY target/*.jar /opt/app.jar               
+[36mINFO[0m[0019] Resolving srcs [target/*.jar]...             
+end of resolve sources
+[36mINFO[0m[0019] Resolving paths                              
+[36mINFO[0m[0019] Taking snapshot of files...                  
+[36mINFO[0m[0021] WORKDIR /opt                                 
+[36mINFO[0m[0021] cmd: workdir                                 
+[36mINFO[0m[0021] Changed working directory to /opt            
+[36mINFO[0m[0021] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0021] CMD ["java", "-jar", "app.jar"]              
+[36mINFO[0m[0021] Pushing layer docker-registry.default.svc.cluster.local:5000/todo/cache:07c19906815ccb5f46e6579dbfe1bc4631a5cd15d471536d52db462d5a1a8557 to cache now 
+[36mINFO[0m[0021] No files changed in this command, skipping snapshotting. 
+[33mWARN[0m[0025] error uploading layer to cache: failed to push to destination docker-registry.default.svc.cluster.local:5000/todo/cache:5788290f8ee0827943a00515fd121074b03a000c6511a5a1e94f0d72570e202b: UNKNOWN: unknown error; map[Code:ImageStream:Unknown Err:map[ErrStatus:map[code:404 details:map[kind:namespaces name:todo] message:namespaces "todo" not found metadata:map[] reason:NotFound status:Failure]] Message:CreateImageStreamMapping: error creation of todo/cache ImageStreamMapping] 
+
+Showing logs for build [32mtroyhart-jx-sd1-master-release-v9whz-5[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mtroyhart-jx-sd1-master-release-v9whz-5[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/**-sd1 to an unshallow repository
+Generating change log from git ref 8fbe92a1873e0dd8da9cc7a1f43311a5fd8ee3b2 => bf5ad9ee397600920c1dd31bdcf49b4691fd7173
+Associating user ******** in users.jenkins.io with email thart@myriad.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user ******** in users.jenkins.io
+WARNING: Failed to enrich commit 1f75c66b8cef840a89c5ce367c18ea6b7bb9f9c6 with issues: User.jenkins.io "********" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user ******** in users.jenkins.io with email thart@myriad.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user ******** in users.jenkins.io
+WARNING: Failed to enrich commit 1f75c66b8cef840a89c5ce367c18ea6b7bb9f9c6 with issues: User.jenkins.io "********" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Finding issues in commit messages using git format
+Associating user ******** in users.jenkins.io with email thart@myriad.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user ******** in users.jenkins.io
+WARNING: Failed to enrich commit 8967fe2e6e76d0a21604eac0ac712173c21935b7 with issues: User.jenkins.io "********" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user ******** in users.jenkins.io with email thart@myriad.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user ******** in users.jenkins.io
+WARNING: Failed to enrich commit 8967fe2e6e76d0a21604eac0ac712173c21935b7 with issues: User.jenkins.io "********" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+WARNING: No release found for ********/**-sd1 and tag v0.1.1 so creating a new release
+Updated the release information at https://github.com/********/**-sd1/releases/tag/v0.1.1
+generated: /workspace/source/charts/**-sd1/templates/release.yaml
+Created Release **-sd1-0-1-1 resource in namespace **
+Updating PipelineActivity ********-**-sd1-master-5 with version 0.1.1
+Updated PipelineActivities ********-**-sd1-master-5 with release notes URL: https://github.com/********/**-sd1/releases/tag/v0.1.1
+
+Showing logs for build [32mtroyhart-jx-sd1-master-release-v9whz-5[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file **-sd1-0.1.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mtroyhart-jx-sd1-master-release-v9whz-5[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app **-sd1 version 0.1.1 to namespace **-staging
+WARNING: 
+Created Pull Request: https://github.com/********/environment-**osopsdemoos311-staging/pull/14
+Added label updatebot to Pull Request https://github.com/********/environment-**osopsdemoos311-staging/pull/14
+got git provider status pending from PR https://github.com/********/environment-**osopsdemoos311-staging/pull/14
+got git provider status pending from PR https://github.com/********/environment-**osopsdemoos311-staging/pull/14
+got git provider status pending from PR https://github.com/********/environment-**osopsdemoos311-staging/pull/14
+got git provider status pending from PR https://github.com/********/environment-**osopsdemoos311-staging/pull/14
+got git provider status pending from PR https://github.com/********/environment-**osopsdemoos311-staging/pull/14
+got git provider status pending from PR https://github.com/********/environment-**osopsdemoos311-staging/pull/14
+got git provider status pending from PR https://github.com/********/environment-**osopsdemoos311-staging/pull/14
+got git provider status pending from PR https://github.com/********/environment-**osopsdemoos311-staging/pull/14
+Pull Request https://github.com/********/environment-**osopsdemoos311-staging/pull/14 is merged at sha 20731376d2252c9713e2f921520698ad4ffd5df2
+Pull Request merged but we are not waiting for the update pipeline to complete!
+WARNING: Could not find the service URL in namespace **-staging for names **-sd1, **-**-sd1, **-staging-**-sd1
