@@ -21,6 +21,7 @@ public class HelloController {
         greetings.add("bonjour");
         greetings.add("hola");
         greetings.add("howdy");
+        greetings.add("Hello SLC");
     }
 
     /**
